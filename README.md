@@ -10,9 +10,11 @@ Hello, my name is Nicolas (h4wk3r on irc #Wazo). I am a currently alternating be
 
 Let us imagine the following scenario: An agent in a call center is connected with is softphone 'N. SIP XXX'. He logs in via his XiVO Client in order to receive calls from his assigned queues. One of the following 3 events occurs :
 
-> A – The softphone is disconnected from asterisk . 
-> B – The agent finishes his day, turns off his softphone but forgets to disconnect his XiVO Client 
-> C – The agent is at home, the VPN tunnel stops
+> A:  The softphone is disconnected from asterisk . 
+
+> B: The agent finishes his day, turns off his softphone but forgets to disconnect his XiVO Client.
+
+> C: The agent is at home, the VPN tunnel stops.
 
 In these 3 examples, the agent cannot know if he can still recieve calls because he does not recieve any alerts from his XiVO client or from the phone.
 
