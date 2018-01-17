@@ -50,7 +50,7 @@ check_sip()
 
 check_agent()
 {
-	status_agent=$(xivo-agentctl -c 'status '${agent_num[j]}''| grep -c True)
+	status_agent=$(xivo-agentd-cli -c 'status '${agent_num[j]}''| grep -c True)
 }
 
 display_true()
@@ -66,7 +66,7 @@ display_false()
 {
         if [[ $status_agent == 1 ]]; then
                 echo -e "$BLEU" "AGENT""${agent_num[j]}:" "$ROUGE" "CompteSIP non connecte & Agent connecte : .... DECONNEXION AGENT N°""${agent_num[j]}"" : OK""$NORMAL"
-        	xivo-agentctl -c 'logoff '"${agent_num[j]}"''
+        	xivo-agentd-cli -c 'logoff '"${agent_num[j]}"''
         else
 	        echo -e "$BLEU" "AGENT""${agent_num[j]}:" "$NORMALG" "Compte SIP deconnecte et Agent déconnecte" "$NORMAL"
 	fi
